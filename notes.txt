@@ -112,3 +112,7 @@ Resolving deltas: 100% (9/9), done.
 Success!
 
 =======
+
+Hello, from kblmn on Ubuntu.  I am the second user, and will commit changes to my local repo,
+and then push them to the central repo on keithrbennett's Github account.
+
