@@ -116,3 +116,10 @@ Success!
 Hello, from kblmn on Ubuntu.  I am the second user, and will commit changes to my local repo,
 and then push them to the central repo on keithrbennett's Github account.
 
+====
+
+That didn't work too well.  I forgot that I had to add kblmn as a collaborator
+on the Github repo.  On the keithrbennett Github page I selected "Admin",
+then "Collaborators", then added "kblmn".
+
+
