@@ -122,4 +122,22 @@ That didn't work too well.  I forgot that I had to add kblmn as a collaborator
 on the Github repo.  On the keithrbennett Github page I selected "Admin",
 then "Collaborators", then added "kblmn".
 
+====
+
+Uh-oh... this happened on the Ubuntu VM:
+
+kblmn@ubuntu:~/work/git-sandbox$ git svn rebase
+Migrating from a git-svn v1 layout...
+Data from a previous version of git-svn exists, but
+	.git/svn
+	(required for this version (1.7.1) of git-svn) does not exist.
+Done migrating from a git-svn v1 layout
+Unable to determine upstream SVN information from working tree history
+
+It looks like the Mac version of git-svn is older (v1) than Ubuntu's (v1.7.1).
+
+Come to think of it, would we even want multiple users rebasing?
+
+====
+
 
