@@ -140,4 +140,16 @@ Come to think of it, would we even want multiple users rebasing?
 
 ====
 
+No, we wouldn't.  Since all collaborators are pointing to the Github repo,
+we want them to sync up with that.  Only the gitmaster would communicate
+with svn.
+
+Then how do we handle changes on svn that need to be merged into
+our own work?
+
+The gitmaster would need to merge (git svn update?) them into the central Github
+repo.  This would have to happen indirectly, to a local repo that was then
+pushed to Github.
+
+
 
