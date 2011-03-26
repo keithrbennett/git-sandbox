@@ -37,3 +37,11 @@ Last Changed Date: 2011-03-26 14:45:13 -0400 (Sat, 26 Mar 2011)
 
 ... and git remote -v produces no output, showing that the svn repo is not considered a remote branch.
 
+----
+
+I got this when doing a git svn rebase without committing local changes:
+
+{[master] ± }: git svn rebase                                                                                       notes.txt: needs update
+update-index --refresh: command returned error: 1
+
+
