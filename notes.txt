@@ -15,3 +15,7 @@ git svn clone https://subversion.assembla.com/svn/git-svn-sandbox/trunk git-sand
 
 I added this text.  Still on the master branch, I will now commit to git.
 
+----
+
+Now I'll add this line, git commit -a, git svn rebase (should have no effect), and
+then git svn dcommit.
