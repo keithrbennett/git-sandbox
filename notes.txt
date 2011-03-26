@@ -44,4 +44,7 @@ I got this when doing a git svn rebase without committing local changes:
 {[master] ± }: git svn rebase                                                                                       notes.txt: needs update
 update-index --refresh: command returned error: 1
 
+Now I'll add a remote of this repo on my Github account:
+git remote add origin git@github.com:keithrbennett/git-sandbox.git
 
+I'll commit this text locally, then push to github and dcommit to svn. 
