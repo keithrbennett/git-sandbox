@@ -48,3 +48,67 @@ Now I'll add a remote of this repo on my Github account:
 git remote add origin git@github.com:keithrbennett/git-sandbox.git
 
 I'll commit this text locally, then push to github and dcommit to svn. 
+
+----
+
+That worked.  But what is the meaning of the Github repo?
+Is it just backup for the local repo?
+Others could clone it.
+Others could point to it as their remote.  Hmmm, let's try that.
+
+----
+
+I just created a new Github account, "kblmn", whose email address is "keithrbennett.lmn@gmail.com".
+I also created a "kblmn" user account on my Ubuntu VM, and did the global git config for it.
+Now I will clone the repo on keithrbennett's Github account:
+
+kblmn@ubuntu:~$ mkdir work
+kblmn@ubuntu:~$ cd work
+kblmn@ubuntu:~/work$ git clone git@github.com:keithrbennett/git-sandbox.git
+Initialized empty Git repository in /home/kblmn/work/git-sandbox/.git/
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+
+Hmmm, I guess I needed to set up a public key and upload it to Github:
+
+kblmn@ubuntu:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kblmn/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kblmn/.ssh/id_rsa.
+Your public key has been saved in /home/kblmn/.ssh/id_rsa.pub.
+The key fingerprint is:
+44:1f:3b:3a:9f:29:01:ed:7b:78:da:d7:07:d7:e5:b4 kblmn@ubuntu
+The key's randomart image is:
++--[ RSA 2048]----+
+|        . .      |
+|       o . o     |
+|      . o +      |
+|       + . .    o|
+|        S      o+|
+|         * o  .E+|
+|        + *  . o |
+|         *  . . .|
+|        . ..   . |
++-----------------+
+kblmn@ubuntu:~$ cat .ssh/*pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWeuvMRYx4y4LqErxtqjl2hNsWbSykNLtdo8lvUgnJQAr1iTZ7xp5dNDiYFdH6B1ybE26qsuJC6S0lu4kmUOHY6ib3IgVEePkv3U345mOjh88IvkxtHOkAtKCT3j8Oq9c6QNvFIMYoT18LgUW+Em36dQ96DL/JBplTZBh8j8HDLVlT2fTGkG5pgyaL3KWl8CgkI+cb/GwU3MBNuVcMg5tClgzHwxOmERRjHgiWSsR7qByotpZ6KymM+xyivtNvn+5WUHJ+a3D3r1SGZeSpoR46QtT0UYrQJjjXp9Y7paAyMZ/YMqAhH8ivnPfBlAZb6j26hPpeWBSn2zdbzsvEF2f7 kblmn@ubuntu
+
+Let's try the git clone again:
+
+kblmn@ubuntu:~/work$ git clone git@github.com:keithrbennett/git-sandbox.git
+Initialized empty Git repository in /home/kblmn/work/git-sandbox/.git/
+remote: Counting objects: 20, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 20 (delta 9), reused 0 (delta 0)
+Receiving objects: 100% (20/20), done.
+Resolving deltas: 100% (9/9), done.
+
+Success!
+
+
