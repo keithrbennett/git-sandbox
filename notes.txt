@@ -1,0 +1,9 @@
+These are notes of the git-svn research.
+First I've created an svn repo in a personal free Assembla account.
+It was created with a trunk directory automatically.
+I created and committed tags and branches directories.
+
+The checkout command is:
+
+svn co https://subversion.assembla.com/svn/git-svn-sandbox/trunk git-svn-sandbox
+
