@@ -7,3 +7,11 @@ The checkout command is:
 
 svn co https://subversion.assembla.com/svn/git-svn-sandbox/trunk git-svn-sandbox
 
+----
+
+Then I created a git-sandbox directory that was a git svn clone of that svn repo:
+
+git svn clone https://subversion.assembla.com/svn/git-svn-sandbox/trunk git-sandbox
+
+I added this text.  Still on the master branch, I will now commit to git.
+
