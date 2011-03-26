@@ -19,3 +19,21 @@ I added this text.  Still on the master branch, I will now commit to git.
 
 Now I'll add this line, git commit -a, git svn rebase (should have no effect), and
 then git svn dcommit.
+
+----
+
+git svn info:
+
+{[master] ± }: git svn info                                                                                                                                                                                                 26.Mar.11 15Path: .
+URL: https://subversion.assembla.com/svn/git-svn-sandbox/trunk
+Repository Root: https://subversion.assembla.com/svn/git-svn-sandbox
+Repository UUID: 37275576-7f8a-428c-bcc9-0042c73c7665
+Revision: 5
+Node Kind: directory
+Schedule: normal
+Last Changed Author: keithrbennett
+Last Changed Rev: 5
+Last Changed Date: 2011-03-26 14:45:13 -0400 (Sat, 26 Mar 2011)
+
+... and git remote -v produces no output, showing that the svn repo is not considered a remote branch.
+
